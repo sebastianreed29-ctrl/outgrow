@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outgrow</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Send people to their own language; the links below work without JS.
+  (function () {
+    var langs = (navigator.languages || [navigator.language || '']).map(function (l) { return l.toLowerCase(); });
+    for (var i = 0; i < langs.length; i++) {
+      var l = langs[i];
+      if (l.indexOf('da') === 0) return location.replace('da/');
+      if (l.indexOf('sv') === 0) return location.replace('sv/');
+      if (l.indexOf('nb') === 0 || l.indexOf('nn') === 0 || l.indexOf('no') === 0) return location.replace('nb/');
+      if (l.indexOf('en') === 0) return location.replace('en/');
+    }
+  })();
+</script>
+</head>
+<body>
+<main>
+  <h1>Outgrow</h1>
+  <p class="lead">Vælg sprog · Välj språk · Velg språk · Choose language</p>
+  <div class="card">
+    <p><a href="da/">Dansk</a></p>
+    <p><a href="sv/">Svenska</a></p>
+    <p><a href="nb/">Norsk</a></p>
+    <p><a href="en/">English</a></p>
+  </div>
+</main>
+</body>
+</html>
